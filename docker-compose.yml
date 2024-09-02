@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:16.4
+    container_name: qrdb
+    ports:
+      - 5432:5432
+    volumes:
+      - db-storage:/var/lib/postgresql/data
+volumes:
+  db-storage:
